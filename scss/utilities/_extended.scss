@@ -1,0 +1,21 @@
+// -------------------------------------------
+// PLACEHOLDERS
+// ------ 
+
+
+// ------ Images
+
+%img-blocky { //this center the image and turn to block
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// ------ Nav items
+
+%round-box { 
+    padding: em(10px);
+    margin-bottom: 1em;
+    border: 1px $silver solid;
+    border-radius: 2px;
+}
