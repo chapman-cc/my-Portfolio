@@ -2,3 +2,30 @@
 // LAYOUT
 // ========================================
 
+.background {
+    background: $clr-secondary;
+}
+
+.header {
+    background: $clr-primary; // background color of header
+    width: 100vw;
+    position: relative;
+    top: 0;
+
+    @include flexy(row, nowrap, space-evenly, center);
+
+    @include mq (small) {
+        & .title { // to eliminate h1 natural margin in mobile view 
+            margin: 0;
+        }
+    }
+
+    @include mq (middle) {
+        flex-direction: column;
+    }
+
+    @include mq (big) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

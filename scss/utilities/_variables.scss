@@ -12,7 +12,7 @@ $black: #000;
 // webpage specific colors
 $blaze-orange: #FF6107;
 $ebony-clay: #23253A;
-$Chardonnayapprox: #FFBF90; // * font color
+$Chardonnayapprox: #FFBF90; 
 $yellow: #FAFF00;
 $bright-red: #AD0000;
 
@@ -25,20 +25,6 @@ $bright-red: #AD0000;
 $clr-primary: $blaze-orange; // map-get($themes, default);
 $clr-secondary: $ebony-clay; // map-get($themes, sidebar);
 $clr-title: $Chardonnayapprox;
-
-// -------------------------------------------
-// Fonts
-// -------------------------------------------
-$font-stack-sansserif: Helvetica, Verdana, sans-serif;
-$font-stack-serif: Georgia, TimesNewRoman, serif;
-$font-stack-mono: "Courier New", Courier, monospace;
-
-// -------------------------------------------
-// Fonts
-// -------------------------------------------
-$base__font-size: 16px;
-$base__font-color: $black;
-$base__line: 24px;
 
 // -------------------------------------------
 // Breakpoints

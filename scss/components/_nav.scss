@@ -1,0 +1,93 @@
+// -------------------------------------------
+// NAVBAR Styling
+// -------------------------------------------
+
+.nav {
+
+    @include flexy(column, nowrap, initial, initial);
+
+    @include mq(small) {
+        //  the following styles applies to mobile only
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+        padding: 1.5rem;
+
+        background: rgba(darken($clr-primary, 20%), 0.8);
+
+        transform: scale(1, 0);
+        opacity: 0;
+        transform-origin: top;
+        transition: 200ms;
+
+        &__link {
+            padding-bottom: 0.5em;
+ 
+        }
+
+        &__toggle:checked~& {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+
+    }
+
+    @include mq(middle) {
+        width: 100vw;
+        flex-direction: row;
+
+        &__link {
+            flex-basis: calc(100%/3);
+            text-align: center;
+            &:hover {
+                color: $clr-primary;
+                background: rgba($yellow, 0.5);
+                // outline: 10px;
+                border-radius: 15px;
+                // border: 1px green solid;
+                transition: 200ms;
+            }
+        }
+
+        &__toggle-label {
+            display: none;
+        }
+    }
+
+    @include mq(big) {
+        width: 60%;
+    }
+
+    // * -------------------------------------------------------
+    // * the folling style only consist of HAMBURGER MENU STYLES 
+
+    &__toggle-label span,
+    &__toggle-label::before,
+    &__toggle-label::after {
+        display: block;
+        background: $white;
+        height: 2px;
+        width: 2em;
+        border-radius: 2px;
+        position: relative;
+    }
+
+    &__toggle-label::before,
+    &__toggle-label::after {
+        content: "";
+        position: absolute;
+    }
+
+    &__toggle-label::before {
+        top: 1em;
+    }
+
+    &__toggle-label::after {
+        bottom: 1em;
+    }
+
+    // * end of HAMBURGER MENU style
+    // * -------------------------
+}

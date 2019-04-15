@@ -2,3 +2,22 @@
 // TEXT Styling
 // -------------------------------------------
 
+// ------- Placeholders -------
+%yellow-text-xl {
+    color: $clr-title;
+    text-transform: uppercase;
+}
+// ----------------------------
+
+.title {
+    @extend %yellow-text-xl;
+    text-align: center;
+}
+
+.nav__link {
+    @extend %yellow-text-xl;
+    font-size: 1.5em;
+
+
+}
+

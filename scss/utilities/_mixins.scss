@@ -31,10 +31,10 @@
         }
     } @else
     if $break == 'big' {
-        @media only screen and (min-width: map-get($breakpoints, middle)) {
+        @media only screen and (min-width: map-get($breakpoints, big)) {
             @content;
         }
-    } @else 
+    } @else
     if $break == "wide" {
         @media only screen and (min-width: map-get($breakpoints, wide)) {
             @content;
