@@ -3,7 +3,7 @@
 // ========================================
 
 .background {
-    background: $clr-secondary;
+    background: $clr-background;
     min-width: 320px;
 }
 
@@ -47,7 +47,7 @@
         height: 65vh;
     }
     @include mq(big) {
-        height: 60vh;
+        height: 70vh;
     }
     & > p {
         margin: 0;

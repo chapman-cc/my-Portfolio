@@ -1,0 +1,23 @@
+// -------------------------------------------
+// SECTIONS TITLE
+// -------------------------------------------
+
+.section {
+    &__title {
+        @include flexy($wrap: nowrap);
+        margin-bottom: 2em;
+
+        &-line {
+            display: inline-block;
+            background: $clr-secondary; 
+            width: 10%;
+            height: 2px;
+        }
+
+        &-text {
+            display: inline-block;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+}

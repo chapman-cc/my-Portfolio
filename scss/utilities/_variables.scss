@@ -13,8 +13,8 @@ $black: #000;
 $blaze-orange: #FF6107;
 $ebony-clay: #23253A;
 $Chardonnayapprox: #FFBF90; 
+$Totem-Pole: #A3130B;
 $yellow: #FAFF00;
-$bright-red: #AD0000;
 
 // $themes: (
 //     default: $ebony-clay,
@@ -23,7 +23,8 @@ $bright-red: #AD0000;
 
 
 $clr-primary: $blaze-orange; // map-get($themes, default);
-$clr-secondary: $ebony-clay; // map-get($themes, sidebar);
+$clr-secondary: $Totem-Pole;
+$clr-background: $ebony-clay; // map-get($themes, sidebar);
 $clr-title: $Chardonnayapprox;
 
 // -------------------------------------------

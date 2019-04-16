@@ -19,8 +19,9 @@
         &::first-letter {
             font-size: 1.2em;
             color: lighten($clr-title, 5%);
-            background: $clr-secondary;
+            background: $clr-background;
             padding: 0 0.2em 0 0.6em;
+            box-shadow: -5px -5px $clr-secondary; 
         }
 
     }
@@ -85,7 +86,7 @@
         font-size: 0.8em;
     }
     &__help a {
-        color: $clr-secondary;
+        color: $clr-background;
         font-size: 0.5em;
     }
 }

@@ -1,0 +1,77 @@
+// -------------------------------------------
+// SECTIONS PROJECT
+// -------------------------------------------
+
+.project {
+    display: grid;
+    grid-gap: 1em;
+    max-width: 80%;
+    margin: 0 auto;
+    @include mq(middle) {
+        max-width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5em 1em;
+    }
+    @include mq(big) {
+        max-width: 80%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2em;
+    }
+
+    &__item {
+        display: inline-block;
+        padding: 1em;
+        border-radius: 6px;
+        background: rgba(lighten($clr-background, 40%), 0.4);
+
+        transition: background 200ms, transform 500ms, height 500ms;
+
+    }
+    
+    &__preview {
+        // display: block;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 6px;
+        
+        box-shadow: 0 5px 5px -1px $clr-background;
+
+        transition: all 700ms 250ms;
+    }
+    
+    &__title {
+        @include mq(small) {
+            margin-top: 0.2em;
+        }
+    }
+
+    &__desc,
+    &__help {
+        @include mq(big) {
+            line-height: 0;
+            opacity: 0;
+        }
+    }
+
+    &__help {
+        @include flexy($justify: space-around)
+    }
+    
+    // * hover state transition only 
+    @include mq(big) {
+        &__item:hover {
+            transform: scale(1.2);
+            background: rgba(lighten($clr-background, 40%), 1)
+        }
+        &__item:hover > &__preview {
+            transform: scale(1.08);
+            box-shadow: 0 10px 10px -5px $clr-background;
+        }
+        &__item:hover &__desc, 
+        &__item:hover &__help {
+            line-height: 1.5;
+            opacity: 1;
+            transition: line-height 200ms, opacity 500ms 500ms;
+        } 
+    } // end of hover state transition
+}
