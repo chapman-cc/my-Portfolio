@@ -2,9 +2,11 @@
 // SECTIONS
 // -------------------------------------------
 
+// <section> title
 .section {
     &__title {
         @include flexy($wrap: nowrap);
+        margin-bottom: 2em;
 
         &-line {
             display: inline-block;
@@ -21,17 +23,23 @@
     }
 }
 
+// end of <section> title
+
 .project {
     &__list {
-        @include flexy;
-    }
-    &__list li {
-        display: inline;
+        display: grid;
+        grid-gap: 1em;
+        max-width: 80%;
+        margin: 0 auto;
         @include mq(middle) {
-            flex: calc(100% /3 );
+            max-width: 90%;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1.5em 0.5em;
         }
         @include mq(big) {
-            flex: calc(100% /4 );
+            max-width: 80%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2em;
         }
     }
 
@@ -39,35 +47,57 @@
         display: inline-block;
         padding: 1em;
         border-radius: 6px;
-        margin: 0 auto 1em;
         background: rgba(lighten($clr-secondary, 40%), 0.4);
         
-        // box-shadow: inset 0 0 8px $clr-secondary;
-        
-        transition: 200ms;
-
-        &:hover {
-            transform: scale(1.2);
-        }
-
-    }
-
-    &__preview {
-        display: block; //turn <img> into block element
-        width: 60vw;
-        border-radius: 6px;
-        margin: 0 auto;
-
-        @include mq(middle) {
-            width: 18vw;
-        }
         @include mq(big) {
-            width: 15vw;
+            height: 18em;
+
         }
-
-
+        transition: background 200ms, transform 500ms, height 500ms;
 
     }
+    
+    &__preview {
+        //     display: block; //turn <img> into block element
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 6px;
+        
+        box-shadow: 0 5px 5px -1px $clr-secondary;
 
+        transition: all 700ms ease-out 200ms;
+    }
+    
+    &__title {
+        @include mq(small) {
+            margin-top: 0.2em;
+        }
+    }
 
+    &__desc,
+    &__help {
+        @include mq(big) {
+            opacity: 0;
+        }
+    }
+    
+    @include mq(big) {
+        &__item:hover {
+            height: 23em;
+            transform: scale(1.2);
+            background: rgba(lighten($clr-secondary, 40%), 1)
+        }
+        &__item:hover > &__preview {
+            transform: scale(1.1);
+            // box-shadow: 0 10px 10px -5px $clr-secondary;
+        }
+        &__item:hover &__desc, 
+        &__item:hover &__help {
+            // &__item &__desc, 
+            // &__item &__help {
+                opacity: 1;
+                transition: opacity 300ms ease-in 500ms;
+            } 
+    }
 }

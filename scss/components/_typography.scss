@@ -81,11 +81,12 @@
         text-align: center;
     }
     &__desc{
-        @extend .project__title;
+        color: white;
+        font-size: 0.8em;
     }
     &__help{
-        @extend .project__title;
         color: $clr-secondary;
         font-size: 0.5em;
+        text-align: center;
     }
 }
