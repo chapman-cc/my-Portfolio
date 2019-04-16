@@ -385,6 +385,11 @@ LAYOUT IMPORTS
     margin: 0;
   }
 }
+@media only screen and (min-width: 1024px) {
+  .header .title {
+    margin: 0.2em;
+  }
+}
 @media only screen and (min-width: 768px) {
   .header {
     flex-direction: column;
@@ -506,10 +511,9 @@ COMPONENTS IMPORTS
   color: white;
   font-size: 0.8em;
 }
-.project__help {
+.project__help a {
   color: #23253A;
   font-size: 0.5em;
-  text-align: center;
 }
 
 .img--avatar {
@@ -617,7 +621,7 @@ COMPONENTS IMPORTS
   .project__list {
     max-width: 90%;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5em 0.5em;
+    grid-gap: 1.5em 1em;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -640,12 +644,11 @@ COMPONENTS IMPORTS
   }
 }
 .project__preview {
-  display: block;
   width: 100%;
   margin: 0 auto;
   border-radius: 6px;
   box-shadow: 0 5px 5px -1px #23253A;
-  transition: all 700ms ease-out 200ms;
+  transition: all 700ms 250ms;
 }
 @media only screen and (max-width: 767px) {
   .project__title {
@@ -656,6 +659,13 @@ COMPONENTS IMPORTS
   .project__desc, .project__help {
     opacity: 0;
   }
+}
+.project__help {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 @media only screen and (min-width: 1024px) {
   .project__item:hover {

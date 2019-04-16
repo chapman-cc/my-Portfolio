@@ -34,7 +34,7 @@
         @include mq(middle) {
             max-width: 90%;
             grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1.5em 0.5em;
+            grid-gap: 1.5em 1em;
         }
         @include mq(big) {
             max-width: 80%;
@@ -58,15 +58,14 @@
     }
     
     &__preview {
-        //     display: block; //turn <img> into block element
-        display: block;
+        // display: block;
         width: 100%;
         margin: 0 auto;
         border-radius: 6px;
         
         box-shadow: 0 5px 5px -1px $clr-secondary;
 
-        transition: all 700ms ease-out 200ms;
+        transition: all 700ms 250ms;
     }
     
     &__title {
@@ -81,7 +80,12 @@
             opacity: 0;
         }
     }
+
+    &__help {
+        @include flexy($justify: space-around)
+    }
     
+    // * hover state transition only 
     @include mq(big) {
         &__item:hover {
             height: 23em;
@@ -94,10 +98,8 @@
         }
         &__item:hover &__desc, 
         &__item:hover &__help {
-            // &__item &__desc, 
-            // &__item &__help {
                 opacity: 1;
                 transition: opacity 300ms ease-in 500ms;
             } 
-    }
+    } // end of hover state transition
 }

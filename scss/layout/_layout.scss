@@ -17,9 +17,12 @@
 
     @include flexy(row, nowrap, space-evenly, center);
 
-    @include mq (small) {
-        & .title { // to eliminate h1 natural margin in mobile view 
+    & .title { // to eliminate h1 natural margin in mobile view 
+        @include mq (small) {
             margin: 0;
+        }
+        @include mq (big) {
+            margin: 0.2em;
         }
     }
 
