@@ -1,0 +1,73 @@
+// -------------------------------------------
+// SECTIONS
+// -------------------------------------------
+
+.section {
+    &__title {
+        @include flexy($wrap: nowrap);
+
+        &-line {
+            display: inline-block;
+            background: red;
+            width: 10%;
+            height: 2px;
+        }
+
+        &-text {
+            display: inline-block;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+    }
+}
+
+.project {
+    &__list {
+        @include flexy;
+    }
+    &__list li {
+        display: inline;
+        @include mq(middle) {
+            flex: calc(100% /3 );
+        }
+        @include mq(big) {
+            flex: calc(100% /4 );
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        padding: 1em;
+        border-radius: 6px;
+        margin: 0 auto 1em;
+        background: rgba(lighten($clr-secondary, 40%), 0.4);
+        
+        // box-shadow: inset 0 0 8px $clr-secondary;
+        
+        transition: 200ms;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+    }
+
+    &__preview {
+        display: block; //turn <img> into block element
+        width: 60vw;
+        border-radius: 6px;
+        margin: 0 auto;
+
+        @include mq(middle) {
+            width: 18vw;
+        }
+        @include mq(big) {
+            width: 15vw;
+        }
+
+
+
+    }
+
+
+}

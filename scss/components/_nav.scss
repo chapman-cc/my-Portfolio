@@ -41,14 +41,7 @@
         &__link {
             flex-basis: calc(100%/3);
             text-align: center;
-            &:hover {
-                color: $clr-primary;
-                background: rgba($yellow, 0.5);
-                // outline: 10px;
-                border-radius: 15px;
-                // border: 1px green solid;
-                transition: 200ms;
-            }
+
         }
 
         &__toggle-label {
@@ -58,6 +51,13 @@
 
     @include mq(big) {
         width: 60%;
+
+        &__link:hover {
+            color: $clr-primary;
+            background: rgba($yellow, 0.5);
+            border-radius: 2em;
+            transition: 200ms;
+        }
     }
 
     // * -------------------------------------------------------

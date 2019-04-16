@@ -348,6 +348,10 @@ template {
   line-height: 1.5;
 }
 
+ul {
+  padding-left: 0;
+}
+
 li {
   list-style: none;
 }
@@ -361,6 +365,7 @@ LAYOUT IMPORTS
 ------------------------------------------- */
 .background {
   background: #23253A;
+  min-width: 320px;
 }
 
 .header {
@@ -368,6 +373,7 @@ LAYOUT IMPORTS
   width: 100vw;
   position: relative;
   top: 0;
+  box-shadow: 0 2px 18px;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -391,10 +397,37 @@ LAYOUT IMPORTS
   }
 }
 
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.intro {
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 768px) {
+  .intro {
+    height: 65vh;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .intro {
+    height: 60vh;
+  }
+}
+.intro > p {
+  margin: 0;
+}
+
 /* -------------------------------------------
 COMPONENTS IMPORTS
 ------------------------------------------- */
-.nav__link, .title {
+.section__title-text, .intro p, .nav__link, .title {
   color: #FFBF90;
   text-transform: uppercase;
 }
@@ -402,9 +435,76 @@ COMPONENTS IMPORTS
 .title {
   text-align: center;
 }
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 2.2em;
+  }
+  .title::first-letter {
+    font-size: 1.2em;
+    color: #ffceaa;
+    background: #23253A;
+    padding: 0 0.2em 0 0.6em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .title {
+    font-size: 2.5em;
+  }
+}
 
 .nav__link {
   font-size: 1.5em;
+}
+@media only screen and (min-width: 1024px) {
+  .nav__link {
+    font-size: 2em;
+  }
+}
+
+.intro p {
+  text-align: center;
+  font-size: 1.2em;
+  text-shadow: 1px 2px 1px #000;
+}
+.intro p:last-child {
+  text-transform: lowercase;
+}
+.intro p:last-child::first-letter {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .intro p {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .intro p {
+    font-size: 1.8em;
+  }
+}
+
+.section__title-text {
+  text-transform: capitalize;
+  letter-spacing: 5px;
+}
+@media only screen and (min-width: 768px) {
+  .section__title-text {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .section__title-text {
+    font-size: 1.5em;
+  }
+}
+
+.project__title, .project__help, .project__desc {
+  color: white;
+  text-align: center;
+}
+.project__help {
+  color: #23253A;
+  font-size: 0.5em;
 }
 
 .img--avatar {
@@ -448,12 +548,6 @@ COMPONENTS IMPORTS
     flex-basis: calc(100%/3);
     text-align: center;
   }
-  .nav__link:hover {
-    color: #FF6107;
-    background: rgba(250, 255, 0, 0.5);
-    border-radius: 15px;
-    transition: 200ms;
-  }
   .nav__toggle-label {
     display: none;
   }
@@ -461,6 +555,12 @@ COMPONENTS IMPORTS
 @media only screen and (min-width: 1024px) {
   .nav {
     width: 60%;
+  }
+  .nav__link:hover {
+    color: #FF6107;
+    background: rgba(250, 255, 0, 0.5);
+    border-radius: 2em;
+    transition: 200ms;
   }
 }
 .nav__toggle-label span, .nav__toggle-label::before, .nav__toggle-label::after {
@@ -480,6 +580,73 @@ COMPONENTS IMPORTS
 }
 .nav__toggle-label::after {
   bottom: 1em;
+}
+
+.section__title {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.section__title-line {
+  display: inline-block;
+  background: red;
+  width: 10%;
+  height: 2px;
+}
+.section__title-text {
+  display: inline-block;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.project__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.project__list li {
+  display: inline;
+}
+@media only screen and (min-width: 768px) {
+  .project__list li {
+    flex: calc(100% /3 );
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .project__list li {
+    flex: calc(100% /4 );
+  }
+}
+.project__item {
+  display: inline-block;
+  padding: 1em;
+  border-radius: 6px;
+  margin: 0 auto 1em;
+  background: rgba(122, 127, 175, 0.4);
+  transition: 200ms;
+}
+.project__item:hover {
+  transform: scale(1.2);
+}
+.project__preview {
+  display: block;
+  width: 60vw;
+  border-radius: 6px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .project__preview {
+    width: 18vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .project__preview {
+    width: 15vw;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

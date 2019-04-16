@@ -4,6 +4,7 @@
 
 .background {
     background: $clr-secondary;
+    min-width: 320px;
 }
 
 .header {
@@ -11,6 +12,8 @@
     width: 100vw;
     position: relative;
     top: 0;
+
+    box-shadow: 0 2px 18px;
 
     @include flexy(row, nowrap, space-evenly, center);
 
@@ -27,5 +30,23 @@
     @include mq (big) {
         flex-direction: row;
         justify-content: space-around;
+    }
+}
+
+.wrapper {
+    @include center-container;
+}
+.intro {
+    height: 70vh;
+    @include flexy(column);
+    
+    @include mq(middle) {
+        height: 65vh;
+    }
+    @include mq(big) {
+        height: 60vh;
+    }
+    & > p {
+        margin: 0;
     }
 }

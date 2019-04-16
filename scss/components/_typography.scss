@@ -12,12 +12,80 @@
 .title {
     @extend %yellow-text-xl;
     text-align: center;
+
+    @include mq (middle) {
+        font-size: 2.2em;
+
+        &::first-letter {
+            font-size: 1.2em;
+            color: lighten($clr-title, 5%);
+            background: $clr-secondary;
+            padding: 0 0.2em 0 0.6em;
+        }
+
+    }
+    @include mq(big) {
+        font-size: 2.5em;
+    }
 }
 
 .nav__link {
     @extend %yellow-text-xl;
     font-size: 1.5em;
 
-
+    @include mq(big) {
+        font-size: 2em;
+    }
 }
 
+.intro p{
+    @extend %yellow-text-xl;
+    text-align: center;
+    font-size: 1.2em;
+    
+    
+    text-shadow: 1px 2px 1px $black;
+    
+    &:last-child{
+        text-transform: lowercase;
+        
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    @include mq(middle) {
+        font-size: 1.5em;
+    };
+
+    @include mq(big) {
+        font-size: 1.8em;        
+    };
+}
+
+.section__title-text {
+    @extend %yellow-text-xl;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    @include mq(middle) {
+        font-size: 1.3em;
+    }
+    @include mq(big) {
+        font-size: 1.5em;
+    }
+}
+
+.project {
+    &__title{
+        color: white;
+        text-align: center;
+    }
+    &__desc{
+        @extend .project__title;
+    }
+    &__help{
+        @extend .project__title;
+        color: $clr-secondary;
+        font-size: 0.5em;
+    }
+}
