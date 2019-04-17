@@ -838,7 +838,7 @@ form fieldset {
 }
 .contact__message, .contact__resume {
   text-shadow: 0.1em 0.1em #A3130B;
-  transition: transform 300ms ease-out, text-shadow 300ms 80ms ease-out;
+  transition: transform 300ms ease-in, text-shadow 300ms 80ms ease-in;
   transform-origin: center right;
 }
 .contact__message:hover, .contact__resume:hover {

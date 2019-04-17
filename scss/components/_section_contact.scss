@@ -18,8 +18,8 @@
     &__message,
     &__resume {        
         text-shadow: 0.1em 0.1em $clr-secondary;
-        transition: transform 300ms ease-out, 
-                    text-shadow 300ms 80ms ease-out;
+        transition: transform 300ms ease-in, 
+                    text-shadow 300ms 80ms ease-in;
         transform-origin: center right;
         &:hover {
             text-shadow: -0.3em -0.4em $clr-secondary;
