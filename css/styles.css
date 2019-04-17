@@ -370,7 +370,7 @@ LAYOUT IMPORTS
 
 .header {
   background: #FF6107;
-  width: 100vw;
+  width: 100%;
   position: relative;
   top: 0;
   box-shadow: 0 2px 18px;
@@ -429,10 +429,21 @@ LAYOUT IMPORTS
   margin: 0;
 }
 
+.footer {
+  width: 60vw;
+  margin: 0 auto 5em;
+  border-top: #A3130B 2px solid;
+}
+@media only screen and (min-width: 768px) {
+  .footer {
+    width: 40vw;
+  }
+}
+
 /* -------------------------------------------
 COMPONENTS IMPORTS
 ------------------------------------------- */
-.section__title-text, .intro p, .nav__link, .title {
+.contact__resume, .contact__message, .section__title-text, .intro p, .nav__link, .title {
   color: #FFBF90;
   text-transform: uppercase;
 }
@@ -517,6 +528,25 @@ COMPONENTS IMPORTS
   font-size: 0.5em;
 }
 
+.contact__message {
+  font-size: 1.2em;
+}
+.contact__resume {
+  font-weight: lighter;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 0.8em;
+  opacity: 0.5;
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .copyright {
+    font-size: 1em;
+  }
+}
+
 .img--avatar {
   border-radius: 50%;
 }
@@ -592,6 +622,9 @@ COMPONENTS IMPORTS
   bottom: 1em;
 }
 
+.section {
+  margin-bottom: 10vh;
+}
 .section__title {
   display: flex;
   flex-wrap: nowrap;
@@ -641,6 +674,7 @@ COMPONENTS IMPORTS
 }
 .project__preview {
   width: 100%;
+  max-height: 200px;
   margin: 0 auto;
   border-radius: 6px;
   box-shadow: 0 5px 5px -1px #23253A;
@@ -689,8 +723,6 @@ COMPONENTS IMPORTS
 }
 @media only screen and (min-width: 1024px) {
   .skill {
-    width: 60vw;
-    margin: 0 auto;
     justify-content: space-evenly;
   }
 }
@@ -704,8 +736,68 @@ COMPONENTS IMPORTS
 }
 @media only screen and (min-width: 1024px) {
   .skill__icon {
-    max-width: 130px;
+    max-width: 120px;
   }
+}
+
+.contact {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "contact-textbox contact-background";
+}
+@media only screen and (min-width: 768px) {
+  .contact {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact__block {
+  height: 40vh;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media only screen and (min-width: 768px) {
+  .contact__block {
+    height: 60vh;
+  }
+}
+.contact__block--textbox {
+  grid-area: contact-textbox;
+  margin-right: 1.5em;
+}
+.contact__block--background {
+  grid-area: contact-background;
+  background-image: url("../img/20180828_140132_1024.jpg");
+  background-image: linear-gradient(to left, #23253a, rgba(35, 37, 58, 0.15), rgba(35, 37, 58, 0)), url("../img/20180828_140132_1024.jpg");
+  background-position: -120% 50%;
+  background-size: 80%;
+  background-repeat: no-repeat;
+}
+.contact__message, .contact__resume {
+  text-align: right;
+  transition: transform 300ms ease-out, text-shadow 300ms 80ms ease-out;
+}
+.contact__message:hover, .contact__resume:hover {
+  text-shadow: -0.3em -0.4em #A3130B;
+  transform: translateX(-50px) scale(1.5);
+}
+.contact__link {
+  margin-top: 3em;
+}
+.contact__icon {
+  display: inline-block;
+  margin-left: 1em;
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+  transition: all 500ms;
+}
+.contact__icon:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */

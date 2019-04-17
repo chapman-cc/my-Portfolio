@@ -9,7 +9,7 @@
 
 .header {
     background: $clr-primary; // background color of header
-    width: 100vw;
+    width: 100%;
     position: relative;
     top: 0;
 
@@ -38,6 +38,7 @@
 
 .wrapper {
     @include center-container;
+
 }
 .intro {
     height: 70vh;
@@ -51,5 +52,15 @@
     }
     & > p {
         margin: 0;
+    }
+}
+
+.footer {
+    width: 60vw;
+    margin: 0 auto 5em;
+    border-top: $clr-secondary 2px solid;
+    
+    @include mq(middle) {
+        width: 40vw;
     }
 }

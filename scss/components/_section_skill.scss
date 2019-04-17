@@ -6,19 +6,17 @@
     @include flexy;
     
     @include mq(big) {
-        width: 60vw;
-        margin: 0 auto;
         justify-content: space-evenly;
     }
     &__icon {
         flex: calc(100%/3);
 
         @include mq(middle) {
-            flex: calc(100%/5)
+            flex: calc(100%/5);
         }
-
+        
         @include mq(big) {
-            max-width: 130px;
+            max-width: 120px;
         }
 
     }

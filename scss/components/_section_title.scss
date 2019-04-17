@@ -3,6 +3,8 @@
 // -------------------------------------------
 
 .section {
+    margin-bottom: 10vh;
+
     &__title {
         @include flexy($wrap: nowrap);
         margin-bottom: 2em;

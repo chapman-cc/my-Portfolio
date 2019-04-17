@@ -1,0 +1,72 @@
+// -------------------------------------------
+// SECTIONS CONTACT
+// -------------------------------------------
+
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+    "contact-textbox contact-background";
+    
+    @include mq(middle) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__block {
+        height: 40vh;
+        @include flexy(column, nowrap, center, flex-end);
+        
+        @include mq(middle) {
+            height: 60vh;
+        }
+
+        &--textbox {
+            grid-area: contact-textbox;
+
+            margin-right: 1.5em;
+        }
+        &--background {
+            grid-area: contact-background;
+
+            background-image: url("../img/20180828_140132_1024.jpg");
+            background-image: linear-gradient(to left, rgba($clr-background, 1), rgba($clr-background, 0.15), rgba($clr-background, 0)),
+                                url("../img/20180828_140132_1024.jpg");
+                              
+            background-position: -120% 50%;
+            background-size: 80%;
+            background-repeat: no-repeat;
+        }
+    }
+    &__message,
+    &__resume {
+        text-align: right;
+        
+        transition: transform 300ms ease-out, 
+                    text-shadow 300ms 80ms ease-out;
+        &:hover {
+            text-shadow: -0.3em -0.4em $clr-secondary;
+            transform: translateX(-50px) scale(1.5);
+        }
+    }
+
+    &__link {
+        margin-top: 3em;
+ 
+    }
+    
+    &__icon {
+        display: inline-block;
+        margin-left: 1em;
+        width: 50px;
+        height: 50px;
+        opacity: .4;
+        transition: all 500ms;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

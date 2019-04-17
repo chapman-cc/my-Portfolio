@@ -90,3 +90,25 @@
         font-size: 0.5em;
     }
 }
+
+.contact {
+    &__message {
+        @extend %yellow-text-xl;
+        font-size: 1.2em;
+    }
+    &__resume {
+        @extend %yellow-text-xl;
+        font-weight: lighter;
+    }
+}
+
+.copyright {
+    color: $white;
+    font-size: 0.8em;
+    opacity: 0.5;
+    text-align: center;
+
+    @include mq(middle) {
+        font-size: 1em;
+    }
+}
