@@ -50,5 +50,6 @@ for (const project of projects) {
         </li>
     `;
     projectSection.innerHTML += html;
-    
 }
+
+

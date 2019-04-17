@@ -578,7 +578,7 @@ form input, form button, form textarea {
     font-size: 1em;
   }
 }
-.overlay a {
+.overlay span {
   color: #fff;
   text-decoration: underline;
   text-transform: lowercase;
@@ -909,6 +909,9 @@ form fieldset {
   display: inline-block;
   align-self: flex-end;
   cursor: pointer;
+}
+.overlay--hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
