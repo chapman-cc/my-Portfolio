@@ -117,3 +117,29 @@
 .fas {
     color: $white;
 }
+
+.overlay {
+    &__title {
+        @extend %yellow-text-xl;
+        font-size: 1.4em;
+        margin-top: 0;
+
+        @include mq(middle) {
+            font-size: 2em;
+
+        }
+    }
+    &__text {
+        @extend %yellow-text-xl;
+        font-size: 0.8em;
+        @include mq(middle) {
+            font-size: 1em;
+        }
+    }
+    a {
+        color: $white;
+        text-decoration: underline;
+        text-transform: lowercase;
+    }
+}
+

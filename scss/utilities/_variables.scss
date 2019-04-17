@@ -14,18 +14,23 @@ $blaze-orange: #FF6107;
 $ebony-clay: #23253A;
 $Chardonnayapprox: #FFBF90; 
 $Totem-Pole: #A3130B;
-$yellow: #FAFF00;
+$texas: #F8F9B9;
+$fern: #62BC64;
 
-// $themes: (
-//     default: $ebony-clay,
-//     sidebar: $blaze-orange,
-// );
+$themes: (
+    default: $blaze-orange,
+    success: $fern,
+    error: $Totem-Pole,
+    secondary: $Chardonnayapprox,
+    background: $ebony-clay,
+    title: $texas
+);
 
 
-$clr-primary: $blaze-orange; // map-get($themes, default);
-$clr-secondary: $Totem-Pole;
-$clr-background: $ebony-clay; // map-get($themes, sidebar);
-$clr-title: $Chardonnayapprox;
+$clr-primary: map-get($themes, default);
+$clr-secondary: map-get($themes, error);
+$clr-background: map-get($themes, background);
+$clr-title: map-get($themes, title);
 
 // -------------------------------------------
 // Breakpoints

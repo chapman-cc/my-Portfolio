@@ -54,7 +54,7 @@
 
         &__link:hover {
             color: $clr-primary;
-            background: rgba($yellow, 0.5);
+            background: rgba($clr-title, 0.5);
             border-radius: 2em;
             transition: 200ms;
         }

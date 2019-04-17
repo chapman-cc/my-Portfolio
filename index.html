@@ -187,16 +187,17 @@
         </footer>
         <section class="overlay">
             <div class="overlay__content">
-                <center id="overlayClose" class="overlay__close">
-                    <i class="fas fa-times fa-2x"></i>
-
-                </center>
-                <!-- <form action="POST" class="form">
-                    <input type="text" name="" id="messageName"><br>
-                    <input type="email" name="" id="messageEmail"><br>
-                    <textarea name="" id="messageContent" cols="30" rows="10"></textarea><br>
-                    <button type="submit"></button>
-                </form> -->
+                <i class="fas fa-times fa-2x overlay__close"></i>
+                <h2 class="overlay__title">Send me an Email</h2>
+                <form action="POST" class="form">
+                    <fieldset>
+                        <input type="text" name="senderName" id="messageName" placeholder="Name"><br>
+                        <input type="email" name="senderEmail" id="messageEmail" placeholder="Email"><br>
+                        <textarea name="senderMessage" id="messageContent" placeholder="What do you want to say?"></textarea><br>
+                        <button type="submit">Send</button>
+                    </fieldset>
+                </form>
+                <p class="overlay__text">or you can send to <a href="mailto:chapman.reg@gmail.com">chapman.reg@gmail.com</a></p>
             </div>
         </section>
     </main>

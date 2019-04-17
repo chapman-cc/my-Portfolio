@@ -1,3 +1,49 @@
 // -------------------------------------------
 // FORMS
 // -------------------------------------------
+form {
+    width: auto;
+
+    input {
+        width: 100%;
+        border: none;
+        margin-bottom: 2em;
+        
+        @extend %round-box;
+        
+        @include mq(middle) {
+            width: 70%;
+            height: 20%;
+        }
+    }
+
+    textarea {
+        @extend input;
+        width: 100%;
+        height: 6em;
+        @include mq(middle) {
+            height: 10em;
+            
+        }
+    }
+
+    button {
+        @extend input;
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background: theme(success);
+        
+        @include mq(middle) {
+            width: 40%;
+        }
+        @include mq(big) {
+            width: 20%;
+        }
+
+    }
+    fieldset {
+        border: none
+    }
+}
