@@ -9,12 +9,12 @@
     margin: 0 auto;
     @include mq(middle) {
         max-width: 90%;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5em 1em;
     }
     @include mq(big) {
         max-width: 80%;
-        // grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: 2em;
     }
 
@@ -61,7 +61,11 @@
 
         & a {
             display: inline-block;
-            margin: 0 3em;
+            margin: 0 2em;
+            @include mq(big) {
+                margin: 0 3em;
+                
+            }
         }
 
         & a:last-child {

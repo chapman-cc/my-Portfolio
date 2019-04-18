@@ -416,7 +416,7 @@ LAYOUT IMPORTS
 }
 
 .intro {
-  height: 70vh;
+  height: 85vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -426,7 +426,6 @@ LAYOUT IMPORTS
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 50%;
-  box-shadow: inset 10px 10px 50px 100px #23253A;
 }
 @media only screen and (min-width: 768px) {
   .intro {
@@ -436,6 +435,7 @@ LAYOUT IMPORTS
 @media only screen and (min-width: 1024px) {
   .intro {
     height: 70vh;
+    box-shadow: inset 10px 10px 50px 100px #23253A;
   }
 }
 .intro > p {
@@ -461,7 +461,7 @@ form input, form button, form textarea {
   border-radius: 20px;
 }
 
-.overlay__text, .overlay__title, .contact__resume, .contact__message, .section__title-text, .intro p, .nav__link, .title {
+.overlay__text, .overlay__title, .contact__resume, .contact__message, .section__title-text, .nav__link, .title {
   color: #F8F9B9;
   text-transform: uppercase;
 }
@@ -497,15 +497,10 @@ form input, form button, form textarea {
 }
 
 .intro p {
+  color: #F8F9B9;
   text-align: center;
   font-size: 1.2em;
   text-shadow: 1px 2px 1px #000;
-}
-.intro p:last-child {
-  text-transform: lowercase;
-}
-.intro p:last-child::first-letter {
-  text-transform: uppercase;
 }
 @media only screen and (min-width: 768px) {
   .intro p {
@@ -744,13 +739,14 @@ form fieldset {
 @media only screen and (min-width: 768px) {
   .project {
     max-width: 90%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 1.5em 1em;
   }
 }
 @media only screen and (min-width: 1024px) {
   .project {
     max-width: 80%;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2em;
   }
 }
@@ -788,7 +784,12 @@ form fieldset {
 }
 .project__info a {
   display: inline-block;
-  margin: 0 3em;
+  margin: 0 2em;
+}
+@media only screen and (min-width: 1024px) {
+  .project__info a {
+    margin: 0 3em;
+  }
 }
 .project__info a:last-child {
   float: right;

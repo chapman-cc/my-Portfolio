@@ -41,7 +41,7 @@
 
 }
 .intro {
-    height: 70vh;
+    height: 85vh;
     @include flexy(column);
     
     background-image:   linear-gradient(
@@ -52,14 +52,13 @@
                         background-size: cover;
                         background-repeat: no-repeat;
                         background-position: center 50%;
-
-    box-shadow: inset 10px 10px 50px 100px $clr-background;
     
     @include mq(middle) {
         height: 65vh;
     }
     @include mq(big) {
         height: 70vh;
+        box-shadow: inset 10px 10px 50px 100px $clr-background;
     }
     & > p {
         margin: 0;
