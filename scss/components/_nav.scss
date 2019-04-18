@@ -50,7 +50,7 @@
     }
 
     @include mq(big) {
-        width: 60%;
+        width: 50%;
 
         &__link:hover {
             color: $clr-primary;

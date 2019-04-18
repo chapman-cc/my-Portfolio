@@ -44,6 +44,17 @@
     height: 70vh;
     @include flexy(column);
     
+    background-image:   linear-gradient(
+                            rgba($clr-background, 0.75), 
+                            rgba($clr-background, 0.75)
+                        ), 
+                        url("../img/IMG_20181006_135932-EFFECTS.jpg"), ;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center 50%;
+
+    box-shadow: inset 10px 10px $clr-background;
+    
     @include mq(middle) {
         height: 65vh;
     }

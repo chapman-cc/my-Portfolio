@@ -82,6 +82,7 @@
         <input type="checkbox" id="nav__toggle" class="nav__toggle" hidden>
         <nav class="nav">
             <a href="#project" class="nav__link">project</a>
+            <a href="#skill" class="nav__link">skill</a>
             <a href="#intro" class="nav__link">about me</a>
             <a href="#contact" class="nav__link">contact</a>
         </nav>
@@ -101,17 +102,16 @@
 
             <ul class="project">
                 <!-- ! below code is mockup -->
-                <!-- <li class="project__item">
-                    <img src="./img/dashboard.jpg" alt="" class="project__preview">
-                    <h3 class="project__title">Employee Directory</h3>
-                    <p class="project__desc">Using JS Fetch API to draw employee details and display in a modal viewer
-                    </p>
-                    <div class="project__help">
-                        <a href="">GitHub</a> <a href="">Demo</a>
+                <!-- 
+                <li class="project__item">
+                    <img src="${project.imgSrc}" alt="${project.title}" class="project__preview">
+                    <h3 class="project__title">${project.title}</h3>
+                    <p class="project__desc">${project.desc}</p>
+                    <div class="project__info">
+                        <a href="${project.githubLink}" target="_blank">GitHub</a> <a href="${project.githubDemo}" target="_blank">Demo</a>
                     </div>
-                </li> -->
-
-
+                </li> 
+                -->
             </ul>
 
         </article>
@@ -132,8 +132,7 @@
                 <svg class="skill__icon" viewBox="0 0 547.8 410.6">
                     <use xlink:href="#sassSVG" />
                 </svg>
-
-                <svg class="skill__icon" viewBox="0 0 220 60">
+                <svg class="skill__icon whitebg" viewBox="0 0 220 60">
                     <use xlink:href="#jquerySVG" />
                 </svg>
                 <svg class="skill__icon" viewBox="0 0 256 256">

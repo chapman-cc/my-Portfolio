@@ -14,23 +14,26 @@
     }
     @include mq(big) {
         max-width: 80%;
-        grid-template-columns: repeat(4, 1fr);
+        // grid-template-columns: repeat(3, 1fr);
         grid-gap: 2em;
     }
 
     &__item {
         display: inline-block;
+        height: 100%;
         padding: 1em;
         border-radius: 6px;
         background: rgba(lighten($clr-background, 40%), 0.4);
 
-        transition: background 200ms, transform 500ms, height 500ms;
+        transition: background 200ms, height 500ms, transform 500ms;
+
+        position: relative;
 
     }
     
     &__preview {
-        // display: block;
-        width: 100%;
+        display: block;
+        widows: 90%;
         max-height: 200px;
         margin: 0 auto;
         border-radius: 6px;
@@ -46,33 +49,43 @@
         }
     }
 
-    &__desc,
-    &__help {
+    &__info {
         @include mq(big) {
-            line-height: 0;
-            opacity: 0;
+            position: absolute;
+            left: 1em;
+            right: 1em;
+            top: 0%;
+
+            opacity: 0; 
+        }
+
+        & a {
+            display: inline-block;
+            margin: 0 3em;
+        }
+
+        & a:last-child {
+            float: right;
         }
     }
 
-    &__help {
-        @include flexy($justify: space-around)
-    }
     
     // * hover state transition only 
     @include mq(big) {
         &__item:hover {
             transform: scale(1.2);
+            height: 150%;
+            z-index: 99;
             background: rgba(lighten($clr-background, 40%), 1)
         }
         &__item:hover > &__preview {
             transform: scale(1.08);
             box-shadow: 0 10px 10px -5px $clr-background;
         }
-        &__item:hover &__desc, 
-        &__item:hover &__help {
-            line-height: 1.5;
+        &__item:hover > &__info {
             opacity: 1;
-            transition: line-height 200ms, opacity 500ms 500ms;
+            top: 60%;
+            transition: top 200ms, opacity 500ms 500ms;
         } 
     } // end of hover state transition
 }

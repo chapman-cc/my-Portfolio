@@ -345,6 +345,10 @@ template {
   display: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "Open Sans", Helvetica, Verdana, sans-serif;
   box-sizing: border-box;
@@ -418,6 +422,11 @@ LAYOUT IMPORTS
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(rgba(35, 37, 58, 0.75), rgba(35, 37, 58, 0.75)), url("../img/IMG_20181006_135932-EFFECTS.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  box-shadow: inset 10px 10px #23253A;
 }
 @media only screen and (min-width: 768px) {
   .intro {
@@ -675,7 +684,7 @@ form fieldset {
 }
 @media only screen and (min-width: 1024px) {
   .nav {
-    width: 60%;
+    width: 50%;
   }
   .nav__link:hover {
     color: #FF6107;
@@ -742,19 +751,21 @@ form fieldset {
 @media only screen and (min-width: 1024px) {
   .project {
     max-width: 80%;
-    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2em;
   }
 }
 .project__item {
   display: inline-block;
+  height: 100%;
   padding: 1em;
   border-radius: 6px;
   background: rgba(122, 127, 175, 0.4);
-  transition: background 200ms, transform 500ms, height 500ms;
+  transition: background 200ms, height 500ms, transform 500ms;
+  position: relative;
 }
 .project__preview {
-  width: 100%;
+  display: block;
+  widows: 90%;
   max-height: 200px;
   margin: 0 auto;
   border-radius: 6px;
@@ -767,31 +778,36 @@ form fieldset {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .project__desc, .project__help {
-    line-height: 0;
+  .project__info {
+    position: absolute;
+    left: 1em;
+    right: 1em;
+    top: 0%;
     opacity: 0;
   }
 }
-.project__help {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.project__info a {
+  display: inline-block;
+  margin: 0 3em;
+}
+.project__info a:last-child {
+  float: right;
 }
 @media only screen and (min-width: 1024px) {
   .project__item:hover {
     transform: scale(1.2);
+    height: 150%;
+    z-index: 99;
     background: #7a7faf;
   }
   .project__item:hover > .project__preview {
     transform: scale(1.08);
     box-shadow: 0 10px 10px -5px #23253A;
   }
-  .project__item:hover .project__desc, .project__item:hover .project__help {
-    line-height: 1.5;
+  .project__item:hover > .project__info {
     opacity: 1;
-    transition: line-height 200ms, opacity 500ms 500ms;
+    top: 60%;
+    transition: top 200ms, opacity 500ms 500ms;
   }
 }
 
@@ -809,6 +825,9 @@ form fieldset {
 }
 .skill__icon {
   flex: calc(100%/3);
+}
+.skill__icon.whitebg {
+  background: white;
 }
 @media only screen and (min-width: 768px) {
   .skill__icon {
