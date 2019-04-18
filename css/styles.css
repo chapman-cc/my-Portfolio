@@ -426,7 +426,7 @@ LAYOUT IMPORTS
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center 50%;
-  box-shadow: inset 10px 10px #23253A;
+  box-shadow: inset 10px 10px 50px 100px #23253A;
 }
 @media only screen and (min-width: 768px) {
   .intro {
