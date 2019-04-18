@@ -761,8 +761,7 @@ form fieldset {
 }
 .project__preview {
   display: block;
-  widows: 90%;
-  max-height: 200px;
+  height: 200px;
   margin: 0 auto;
   border-radius: 6px;
   box-shadow: 0 5px 5px -1px #23253A;
@@ -802,6 +801,7 @@ form fieldset {
     background: #7a7faf;
   }
   .project__item:hover > .project__preview {
+    height: 240px;
     transform: scale(1.08);
     box-shadow: 0 10px 10px -5px #23253A;
   }

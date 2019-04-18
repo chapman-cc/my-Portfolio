@@ -33,8 +33,7 @@
     
     &__preview {
         display: block;
-        widows: 90%;
-        max-height: 200px;
+        height: 200px;
         margin: 0 auto;
         border-radius: 6px;
         
@@ -83,6 +82,7 @@
             background: rgba(lighten($clr-background, 40%), 1)
         }
         &__item:hover > &__preview {
+            height: 240px;
             transform: scale(1.08);
             box-shadow: 0 10px 10px -5px $clr-background;
         }
