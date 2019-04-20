@@ -3,7 +3,7 @@ const overlay = document.querySelector("#overlay");
 const overlayInnerHTML = `
         <div class="overlay__content">
             <i class="fas fa-times fa-2x overlay__close"></i>
-            <h2 class="overlay__title">Sorry, form's not work'in yet</h2>
+            <h2 class="overlay__title">Send me a message</h2>
             <form method="POST" action="https://formspree.io/chapman.reg@gmail.com" class="form">
                 <fieldset>
                     <input type="text" name="senderName" id="messageName" placeholder="Name"><br>
