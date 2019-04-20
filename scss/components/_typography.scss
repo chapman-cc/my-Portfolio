@@ -39,21 +39,31 @@
     }
 }
 
-.intro p{
-    color: $clr-title;
-    text-align: center;
-    font-size: 1.2em;
-    
-    
-    text-shadow: 1px 2px 1px $black;
+.intro {
+    &__text {
+        color: $clr-title;
+        width: 80%;
+        text-align: center;
+        font-size: 1.2em;
+        
+        
+        text-shadow: 1px 2px 1px $black;
 
-    @include mq(middle) {
-        font-size: 1.5em;
-    };
+        @include mq(middle) {
+            font-size: 1.5em;
+        };
 
-    @include mq(big) {
-        font-size: 1.8em;        
-    };
+        @include mq(big) {
+            width: 60%;
+            font-size: 1.8em;        
+        };
+    }
+
+    &__link {
+        @extend .intro__text;
+        font-size: 1em;
+        font-weight: bold;
+    }
 }
 
 .section__title-text {

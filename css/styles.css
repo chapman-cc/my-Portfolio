@@ -496,21 +496,27 @@ form input, form button, form textarea {
   }
 }
 
-.intro p {
+.intro__text, .intro__link {
   color: #F8F9B9;
+  width: 80%;
   text-align: center;
   font-size: 1.2em;
   text-shadow: 1px 2px 1px #000;
 }
 @media only screen and (min-width: 768px) {
-  .intro p {
+  .intro__text, .intro__link {
     font-size: 1.5em;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .intro p {
+  .intro__text, .intro__link {
+    width: 60%;
     font-size: 1.8em;
   }
+}
+.intro__link {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 .section__title-text {
